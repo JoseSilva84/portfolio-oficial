@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- FIM GOOGLE FONTES -->
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="menu.js" defer></script>
+
+    <title>Dev José Silva</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <!-- <img src="images/logo.png" alt="Logo da Agência BRN"> -->
+                    <p>Dev José Silva</p>
+                </a>
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button>Contato</button>
+                </a>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#formacao">Formação</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><button id="btnCVMobile" class="btn-cv-mobile"><i class="bi bi-file-earmark-pdf"></i> Currículo</button></li>
+                    </ul>
+                </nav>
+
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--interface-->
+    </header>
+
+    <main>
+        <section class="topo-do-site reveal">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>DESENVOLVO SOLUÇÕES DIGITAIS QUE GERAM RESULTADO<span>.</span></h1>
+                        <p>Uno tecnologia, estratégia e experiência do usuário para transformar ideias em aplicações
+                            modernas, performáticas e escaláveis. Do design à implementação, construo soluções web
+                            intuitivas, eficientes e preparadas para crescer com o seu negócio.</p>
+
+                        <div class="btn-contato">
+                            <a href="#contato">
+                                <button>Entre em contato</button>
+                            </a>
+                        </div>
+                    </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site reveal-right reveal">
+                        <img src="images/pessoa.png" alt="José Silva, desenvolvedor full stack">
+                        <h3 class="reveal-right reveal">José Silva</h3>
+                        <p class="reveal-right reveal">Desenvolvedor Full Stack</p>
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+
+        <section class="especiliadades reveal" id="especialidades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box reveal" data-tooltip="FRONTEND">
+                        <i class="bi bi-code-square"></i>
+                        <h3>FRONTEND</h3>
+                        <p>Desenvolvo interfaces modernas com React e Next.js, criando layouts responsivos com HTML,
+                            CSS, Bootstrap e Tailwind, focados em performance, UX e integração com APIs.</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box" data-tooltip="BACKEND">
+                        <i class="bi bi-server"></i>
+                        <h3>BACKEND</h3>
+                        <p>Crio servidores e APIs com FastAPI em python, também com Node.js e Express, usando
+                            Prisma/Sequelize, MySQL, MongoDB, Firebase, validação Zod e autenticação JWT.</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box" data-tooltip="UI DESIGN">
+                        <i class="bi bi-palette"></i>
+                        <h3>UI DESIGN</h3>
+                        <p>Projeto interfaces centradas no usuário, com foco em UX e UI, criando experiências
+                            intuitivas, acessíveis e responsivas, alinhando usabilidade, estética e performance, com
+                            apoio de ferramentas como Photoshop (experiência), Figma, Canva, Adobe Illustrator
+                            (experiência) e CorelDRAW (experiência) para prototipação e design visual profissional.</p>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--especiliadades-->
+
+        <section class="especiliadades2 reveal">
+            <div class="interface">
+                <div class="flex">
+                    <div class="especialidades-box2 reveal" data-tooltip="ANÁLISE DE DADOS">
+                        <i class="bi bi-graph-up"></i>
+                        <h3>ANÁLISE DE DADOS</h3>
+                        <p>Realizo análise e tratamento de dados com Python, Pandas e SQL, construindo dashboards e
+                            visualizações com Power BI e ferramentas de BI, focados em geração de insights, tomada de
+                            decisão estratégica e integração com diferentes fontes de dados.</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box2" data-tooltip="AUTOMAÇÃO DE PROCESSOS">
+                        <i class="bi bi-gear"></i>
+                        <h3>AUTOMAÇÃO DE PROCESSOS</h3>
+                        <p>Desenvolvo automações com Python para otimizar tarefas operacionais, utilizando bibliotecas
+                            como Pandas, Selenium e APIs para integração entre sistemas, além de técnicas de Web
+                            Scraping para coleta automatizada de informações, criação de rotinas inteligentes e
+                            tratamento de dados, focados em produtividade, redução de erros e eficiência dos fluxos de
+                            trabalho.</p>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box2" data-tooltip="INTELIGÊNCIA ARTIFICIAL">
+                        <i class="bi bi-cpu"></i>
+                        <h3>INTELIGÊNCIA ARTIFICIAL</h3>
+                        <p>Desenvolvo soluções com Inteligência Artificial e Agentes de IA, criando automações
+                            inteligentes, integração com APIs de modelos de linguagem, análise de dados e construção de
+                            assistentes conversacionais, focados em ganho de eficiência, tomada de decisão e
+                            transformação digital dos processos.</p>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--especiliadades-->
+
+        <section class="sobre reveal" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre reveal-left reveal">
+                        <img src="images/foto.png" alt="">
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU JOSÉ SILVA.</span></h2>
+                        <p>Sou desenvolvedor full stack em JavaScript, formando em nível superior em Análise e
+                            Desenvolvimento de Sistemas, com atuação sólida no front-end e no back-end (Node.js e
+                            Python). Trabalho com React e Next.js, além de HTML, CSS e Tailwind, para criar interfaces
+                            modernas, performáticas e responsivas. No back-end, atuo com Node.js, Express e APIs REST,
+                            desenvolvendo soluções escaláveis. Tenho foco em boas práticas, arquitetura limpa,
+                            integração com bancos de dados, Git e entrega de valor real ao negócio. Veja o meu <a href="https://drive.google.com/file/d/18Q87v-9erBWZ2bwWc5sNgEQzN6E8GbWE/view?usp=sharing" target="_blank" data-tooltip="Currículo" class="curriculo">currículo</a></p>
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/josesilvateo/" target="_blank" data-tooltip="Instagram">
+                                <button><i class="bi bi-instagram"></i></button>
+                            </a>
+                            <a href="https://www.youtube.com/@devjosesilva" target="_blank" data-tooltip="YouTube">
+                                <button><i class="bi bi-youtube"></i></button>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jos%C3%A9-silva-dev/" target="_blank" data-tooltip="LinkedIn">
+                                <button><i class="bi bi-linkedin"></i></button>
+                            </a>
+                            <a href="https://github.com/joseSilva84" target="_blank" data-tooltip="GitHub">
+                                <button><i class="bi bi-github"></i></button>
+                            </a>
+                            <button id="btnCV" class="btn-cv" data-tooltip="Currículo"><i class="bi bi-file-earmark-pdf"></i></button>
+                        </div><!--btn-social-->
+                    </div><!--txt-sobre-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
+
+        <section class="formacao reveal" id="formacao">
+            <div class="interface">
+                <h2 class="tituloFormacao">MINHA <span>FORMAÇÃO</span></h2>
+
+                <div class="flex">
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-mortarboard"></i>
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p>UNIASSELVI<br>2024 – 2026</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-hdd-network"></i>
+                        <h3>Hardware e Redes</h3>
+                        <p>Microlins – 2012</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-pc-display"></i>
+                        <h3>Informática Avançada</h3>
+                        <p>New Center Informática – 2012</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-filetype-py"></i>
+                        <h3>Programação em Python</h3>
+                        <p>ENAP – 2024</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-cpu"></i>
+                        <h3>Sistemas Embarcados</h3>
+                        <p>Capacitação Profissional – 2025</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-bar-chart-line"></i>
+                        <h3>Ciência de Dados</h3>
+                        <p>Alura – 2025</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>Programação Web Full Stack</h3>
+                        <p>Geração Tech – 2025</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-git"></i>
+                        <h3>DevOps e Integração Contínua</h3>
+                        <p>Oracle / Alura – 2025</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-window"></i>
+                        <h3>Interface Web com JavaScript</h3>
+                        <p>2025</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-cloud-check"></i>
+                        <h3>Oracle Cloud Infrastructure</h3>
+                        <p>Foundations – 2025</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-robot"></i>
+                        <h3>Inteligência Artificial</h3>
+                        <p>Geração Tech – 2026</p>
+                    </div>
+
+                    <div class="formacao-box reveal">
+                        <i class="bi bi-shield-lock"></i>
+                        <h3>Cibersegurança</h3>
+                        <p>Bootcamp Riachuelo – 2026</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio reveal" id="projetos">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem.jpg);">
+                        <div class="overlay">Projeto 1</div>
+                    </div>
+                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem.jpg);">
+                        <div class="overlay">Projeto 2</div>
+                    </div>
+                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem.jpg);">
+                        <div class="overlay">Projeto 3</div>
+                    </div>
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--portfolio-->
+
+        <section class="formulario reveal" id="contato">
+            <div class="interface">
+                <h2 class="titulo">ENTRE EM <span>CONTATO.</span></h2>
+
+                <form id="whatsappForm">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="text" name="email" id="email" placeholder="Seu e-mail:">
+                    <input type="number" name="whatsapp" id="whatsapp" placeholder="Seu whatsApp:">
+
+                    <select id="servico" name="servico">
+                        <option value="" disabled selected hidden>Selecione um serviço</option>
+                        <option value="Quero um Site">Quero um Site</option>
+                        <option value="Quero um Chatbot">Quero um Chatbot</option>
+                        <option value="Quero um sistema web">Quero um sistema na internet</option>
+                        <option value="Quero personalizar na mensagem">Quero personalizar na mensagem</option>
+                    </select>
+
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar" id="whatsappBtn"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div><!--interface-->
+        </section><!--formulario-->
+
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <p>&copy; 2026 Dev José Silva. Todos os direitos reservados.</p>
+                    </div><!--logo-footer-->
+
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/josesilvateo/" target="_blank" rel="noopener noreferrer" data-tooltip="Instagram">
+                            <button><i class="bi bi-instagram"></i></button>
+                        </a>
+                        <a href="https://www.youtube.com/@devjosesilva" target="_blank" rel="noopener noreferrer" data-tooltip="YouTube">
+                            <button><i class="bi bi-youtube"></i></button>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jos%C3%A9-silva-dev/" target="_blank"
+                            rel="noopener noreferrer" data-tooltip="LinkedIn">
+                            <button><i class="bi bi-linkedin"></i></button>
+                        </a>
+                        <a href="https://github.com/joseSilva84" target="_blank" rel="noopener noreferrer" data-tooltip="GitHub">
+                            <button><i class="bi bi-github"></i></button>
+                        </a>
+                        <button id="btnCVFooter" class="btn-cv" data-tooltip="Currículo"><i class="bi bi-file-earmark-pdf"></i></button>
+                    </div><!--btn-social-->
+                </div>
+            </div><!--line-footer-->
+
+            <div class="line-footer borda">
+                <p>
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:juniornyanata@gmail.com">juniornyanata@gmail.com</a>
+                </p>
+            </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
+    <!-- MODAL CV -->
+    <div id="modalCV" class="modal-cv">
+        <div class="modal-cv-content">
+            <button id="closeCV" class="btn-fechar-cv">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <iframe src="https://drive.google.com/file/d/18Q87v-9erBWZ2bwWc5sNgEQzN6E8GbWE/preview" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Currículo - José Silva">
+            </iframe>
+        </div>
+    </div><!--modal-cv-->
+
+</body>
+
+</html>

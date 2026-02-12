@@ -1,0 +1,1079 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding-top: 90px;
+    color: #fff;
+    overflow-x: hidden;
+
+    /* Verde profundo + preto */
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 90, 20, 0.35), transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(0, 70, 18, 0.30), transparent 50%),
+        radial-gradient(circle at 50% 85%, rgba(0, 60, 15, 0.28), transparent 45%),
+        #020302;
+
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 40, 10, 0.55),
+        rgba(0, 20, 8, 0.65),
+        rgba(0, 35, 12, 0.55)
+    );
+
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    pointer-events: none;
+    mix-blend-mode: screen;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(0,255,140,0.10), transparent 35%),
+        radial-gradient(circle at 80% 25%, rgba(0,255,100,0.08), transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(0,180,90,0.10), transparent 35%);
+
+    animation: luzFlutuando 18s ease-in-out infinite alternate;
+}
+
+@keyframes luzFlutuando {
+    0% {
+        transform: translate3d(0,0,0) scale(1);
+        filter: blur(0px);
+        opacity: 0.6;
+    }
+
+    25% {
+        transform: translate3d(-40px, 30px, 0) scale(1.1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate3d(60px, -20px, 0) scale(1.2);
+        filter: blur(2px);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate3d(-30px, 40px, 0) scale(1.05);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translate3d(20px, -30px, 0) scale(1.15);
+        filter: blur(1px);
+        opacity: 0.9;
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(255,255,255,0.06) 0%,
+            rgba(255,255,255,0.02) 25%,
+            transparent 40%,
+            transparent 60%,
+            rgba(0,255,140,0.04) 75%,
+            transparent 100%
+        );
+
+    animation: reflexoVidro 12s linear infinite;
+
+    pointer-events: none;
+}
+
+@keyframes reflexoVidro {
+    from {
+        transform: translateX(-20%);
+    }
+    to {
+        transform: translateX(20%);
+    }
+}
+
+/* =========================
+   EFEITO LUZ NO NOME
+   ========================= */
+
+.reveal-right.reveal h3,
+.reveal-right.reveal p {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Nome "José Silva" — mantém cor original */
+.reveal-right.reveal h3 {
+    animation: glowName 2.5s ease-in-out infinite;
+}
+
+/* Cargo — verde fixo + glow verde */
+.reveal-right.reveal p {
+    color: #00ff88; /* verde do texto */
+    animation: glowRole 2.5s ease-in-out infinite;
+}
+
+
+/* =========================
+   ANIMAÇÃO DO NOME
+   (usa a cor atual do texto)
+   ========================= */
+
+@keyframes glowName {
+    0% {
+        text-shadow:
+            0 0 0px rgba(255,255,255,0),
+            0 0 0px rgba(255,255,255,0);
+    }
+
+    50% {
+        text-shadow:
+            0 0 6px rgba(255,255,255,0.6),
+            0 0 14px rgba(255,255,255,0.5),
+            0 0 28px rgba(255,255,255,0.35);
+    }
+
+    100% {
+        text-shadow:
+            0 0 0px rgba(255,255,255,0),
+            0 0 0px rgba(255,255,255,0);
+    }
+}
+
+
+/* =========================
+   ANIMAÇÃO DO CARGO (VERDE)
+   ========================= */
+
+@keyframes glowRole {
+    0% {
+        text-shadow:
+            0 0 0px rgba(0,255,136,0);
+    }
+
+    50% {
+        text-shadow:
+            0 0 6px rgba(0,255,136,0.9),
+            0 0 16px rgba(0,255,136,0.7),
+            0 0 32px rgba(0,255,136,0.5);
+    }
+
+    100% {
+        text-shadow:
+            0 0 0px rgba(0,255,136,0);
+    }
+}
+
+.especiliadades .especialidades-box, .especialidades-box2,
+form,
+.img-port {
+    background: rgba(0, 25, 10, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    /* border: 1px solid rgba(0, 255, 120, 0.15); */
+    /* box-shadow: 0 10px 40px rgba(0, 80, 30, 0.25); */
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.interface a {
+    text-decoration: none;
+}
+
+.interface p{
+    color: #00FF08;
+    font-size: 18px;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00FF08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #00FF08;
+}
+h2.tituloFormacao {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+h2.tituloFormacao span {
+    color: #00FF08;
+    padding-bottom: 5%;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #00ff08;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 20px 4%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Transparência + vidro */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+
+    /* Borda suave simulando vidro */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* Profundidade */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.4s ease;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+header.transparent {
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #a9a8a8;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #00ff08;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTILO DO MENU MOBILE */
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.btn-abrir-menu i{
+    color: #00FF08;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #00FF08;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}   
+
+.menu-mobile nav ul li a:hover{
+    background-color: #00FF08;
+    color: #000;
+}
+
+.btn-cv-mobile {
+    width: 90%;
+    background-color: #00FF08;
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: .2s;
+}
+
+.btn-cv-mobile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff08;
+}
+
+.overlay-menu{
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #00FF08;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* ========================
+   FORMAÇÃO (mesmo padrão especialidades)
+======================== */
+
+section.formacao {
+    padding: 80px 4%;
+}
+
+.formacao .flex {
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.formacao-box {
+    width: 280px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    transition: .35s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.formacao-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0,255,136,.25);
+}
+
+.formacao-box i {
+    font-size: 45px;
+    color: #00ff88;
+    margin-bottom: 15px;
+}
+
+.formacao-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.formacao-box p {
+    font-size: 14px;
+    opacity: .8;
+    line-height: 1.5;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especiliadades {
+    padding: 40px 4%;
+}
+
+section.especiliadades .flex {
+    gap: 60px;
+}
+
+.especiliadades .especialidades-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+    position: relative;
+}
+
+.especiliadades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+.especiliadades .especialidades-box:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00FF08;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    z-index: 10;
+    animation: tooltipFadeIn 0.3s ease;
+}
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.especiliadades .especialidades-box i {
+    font-size: 70px;
+    color: #00FF08;
+}
+
+.especiliadades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DAS ESPECIALIDADES2 */
+.especiliadades2 .especialidades-box2 {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+    position: relative;
+}
+
+.especiliadades2 .especialidades-box2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+.especiliadades2 .especialidades-box2:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00FF08;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    z-index: 10;
+    animation: tooltipFadeIn 0.3s ease;
+}
+
+.especiliadades2 .especialidades-box2 i {
+    font-size: 70px;
+    color: #00FF08;
+}
+
+.especiliadades2 .especialidades-box2 h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DAS ESPECIALIDADES2 */
+section.especiliadades2 {
+    padding: 15px 4%;
+}
+
+section.especiliadades2 .flex {
+    gap: 60px;
+}
+
+/* ESTILO DO SOBRE */
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #00FF08;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.curriculo {
+    color: #00FF08;
+    font-weight: 600;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00FF08;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+.btn-social a:hover::after,
+.btn-social button:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00FF08;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    z-index: 10;
+    animation: tooltipFadeIn 0.3s ease;
+}
+
+.btn-social a,
+.btn-social button {
+    position: relative;
+}
+
+/* ESTILO DO PORTFÓLIO */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, select,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #00FF08;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+label {
+    color: #fff;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #00FF08;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 5px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #00FF08;
+}
+
+footer .line-footer p i {
+    color: #00FF08;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+}
+
+.logo-footer p {
+    padding-top: 5%;
+}
+
+@media screen and (max-width: 1020px) {
+
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    .btn-abrir-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    /* TOPO DO SITE */
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /* ESPECIALIDADES */
+    section.especiliadades {
+        padding: 40px 8%;
+    }
+
+    /* FORMAÇÃO */
+    section.formacao {
+        padding: 40px 8%;
+    }
+
+    section.formacao .interface {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .formacao .flex {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* SOBRE */
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+    
+    .btn-social{
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* PORTFÓLIO */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    
+    section.portfolio .flex {
+       gap: 60px;
+    }
+
+    /* RODAPÉ */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+}
+
+/* Responsividade do Modal */
+@media screen and (max-width: 768px) {
+    .modal-cv-content {
+        width: 98%;
+        height: 95vh;
+        max-height: 100%;
+    }
+
+    .btn-fechar-cv {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+/* ESTADO INICIAL (elementos escondidos) */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px) scale(0.98);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+}
+
+/* QUANDO ENTRA NA TELA */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.reveal-left {
+    transform: translateX(-80px);
+}
+
+.reveal-right {
+    transform: translateX(80px);
+}
+
+.reveal-zoom {
+    transform: scale(0.85);
+}
+
+/* =========================
+   MODAL CV
+   ========================= */
+
+.modal-cv {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+    /* Fundo com vidro (blur do site) */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px) brightness(0.8);
+    -webkit-backdrop-filter: blur(8px) brightness(0.8);
+}
+
+.modal-cv.active {
+    display: flex;
+    animation: fadeInModal 0.4s ease-out;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-cv-content {
+    position: relative;
+    width: 95%;
+    max-width: 900px;
+    height: 90vh;
+    max-height: 800px;
+    background: rgba(25, 25, 25, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(0, 255, 136, 0.15);
+    overflow: hidden;
+}
+
+.modal-cv-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-fechar-cv {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 255, 136, 0.9);
+    border: none;
+    border-radius: 50%;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    z-index: 100000;
+}
+
+.btn-fechar-cv:hover {
+    background: #00ff08;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ff08;
+}
+
+.btn-cv {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00FF08;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+.btn-cv:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ff08;
+}
