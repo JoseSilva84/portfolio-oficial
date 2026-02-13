@@ -124,10 +124,64 @@ if (modalCV) {
     });
 }
 
-// Fechar com ESC
+// ===== MODAL DE PROJETOS =====
+const projectModal = document.getElementById('modalProject');
+const projectTitle = document.getElementById('projectTitle');
+const projectDesc = document.getElementById('projectDesc');
+const projectTech = document.getElementById('projectTech');
+const projectLive = document.getElementById('projectLive');
+const projectRepo = document.getElementById('projectRepo');
+const closeProject = document.getElementById('closeProject');
+
+document.querySelectorAll('.img-port').forEach(port => {
+    port.addEventListener('click', () => {
+        const title = port.dataset.title || '';
+        const desc = port.dataset.description || '';
+        const tech = port.dataset.tech || '';
+        const live = port.dataset.live || '#';
+        const repo = port.dataset.github || '#';
+
+        if (projectTitle) projectTitle.textContent = title;
+        if (projectDesc) projectDesc.textContent = desc;
+        if (projectTech) projectTech.textContent = tech;
+        if (projectLive) projectLive.href = live;
+        if (projectRepo) projectRepo.href = repo;
+
+        if (projectModal) {
+            projectModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+if (closeProject) {
+    closeProject.addEventListener('click', () => {
+        if (projectModal) projectModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+}
+
+if (projectModal) {
+    projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+            projectModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Fechar com ESC (fecha modal do CV ou modal de projeto)
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modalCV.classList.contains("active")) {
-        modalCV.classList.remove("active");
-        document.body.style.overflow = "auto";
+    if (e.key === "Escape") {
+        let closed = false;
+        if (modalCV && modalCV.classList.contains("active")) {
+            modalCV.classList.remove("active");
+            closed = true;
+        }
+        if (projectModal && projectModal.classList.contains("active")) {
+            projectModal.classList.remove("active");
+            closed = true;
+        }
+        if (closed) document.body.style.overflow = "auto";
     }
 });

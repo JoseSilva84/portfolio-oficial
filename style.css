@@ -1077,3 +1077,40 @@ footer .line-footer p a {
     transform: scale(1.1);
     box-shadow: 0 0 15px #00ff08;
 }
+
+/* Estilos específicos para botões dentro do modal de projeto */
+#modalProject .btn-cv {
+    /* anula dimensões circulares da classe global */
+    width: auto !important;
+    height: auto !important;
+    border-radius: 10px !important;
+    padding: 12px 20px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    background-color: #00FF08 !important;
+    color: #000 !important;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: none;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+#modalProject .btn-cv.primary {
+    min-width: 220px; /* botão mais largo para "Ver deploy" */
+}
+
+#modalProject .btn-cv:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 30px rgba(0,255,136,0.18) !important;
+}
+
+@media screen and (max-width: 520px) {
+    #modalProject .btn-cv,
+    #modalProject .btn-cv.primary {
+        min-width: 100%;
+        display: block;
+        margin: 6px 0;
+    }
+}

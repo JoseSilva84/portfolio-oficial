@@ -284,13 +284,30 @@
             <div class="interface">
                 <h2 class="titulo">PRINCIPAIS <span>PROJETOS.</span></h2>
                 <div class="flex">
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem.jpg);">
+                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem.jpg);"
+                         data-title="Sistema de Coleta de Dados"
+                         data-description="Sistema para coleta e gerenciamento de dados com formulários e dashboards para análise para desktop." 
+                         data-tech="HTML, CSS, JavaScript, Python, SQLite"
+                         data-live="https://github.com/JoseSilva84/Sistema-para-Coleta-de-Dados-de-Cadeiras"
+                         data-github="https://github.com/JoseSilva84/Sistema-para-Coleta-de-Dados-de-Cadeiras">
                         <div class="overlay">Sistema de Coleta de Dados</div>
                     </div>
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem2.jpg);">
+
+                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem2.jpg);"
+                         data-title="E-Commerce Digital"
+                         data-description="Loja virtual com catálogo, carrinho, integração de pagamentos e deploy em Vercel." 
+                         data-tech="React, Next.js, Tailwind CSS, Node.js, Vercel"
+                         data-live="https://projeto-e-commerce-digital-store-tqj2-6a3mcion0.vercel.app/"
+                         data-github="https://github.com/JoseSilva84/projeto-e-commerce-digital-store">
                         <div class="overlay">E-Commerce Digital</div>
                     </div>
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem3.jpg);">
+
+                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem3.jpg);"
+                         data-title="Site Psicopedagoga"
+                         data-description="Site institucional para psicopedagoga com área de contato e agendamento." 
+                         data-tech="HTML, CSS, JavaScript, Netlify"
+                         data-live="https://site-psicopedagogia-rafaela-soares-nu.vercel.app/"
+                         data-github="https://github.com/JoseSilva84/site-psicopedagogia-rafaela-soares">
                         <div class="overlay">Site Psicopedagoga</div>
                     </div>
                 </div><!--flex-->
@@ -370,6 +387,24 @@
             </iframe>
         </div>
     </div><!--modal-cv-->
+
+        <!-- MODAL PROJETO -->
+        <div id="modalProject" class="modal-cv">
+            <div class="modal-cv-content">
+                <button id="closeProject" class="btn-fechar-cv">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="project-inner" style="padding:28px; color:#fff;">
+                    <h3 id="projectTitle" style="margin-bottom:12px; font-size:24px; color:#00FF08;"></h3>
+                    <p id="projectDesc" style="margin-bottom:12px; line-height:1.4; color:#ddd;"></p>
+                    <p style="margin-bottom:16px;"><strong style="color:#00FF08;">Tecnologias:</strong> <span id="projectTech" style="color:#fff;"></span></p>
+                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                        <a id="projectLive" class="btn-cv primary" target="_blank" rel="noopener noreferrer">Ver deploy</a>
+                        <a id="projectRepo" class="btn-cv" target="_blank" rel="noopener noreferrer">Ver código</a>
+                    </div>
+                </div>
+            </div>
+        </div><!--modal-project-->
 
 </body>
 
