@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap do site
+Sitemap: https://portfolio-oficial-seven.vercel.app/sitemap.xml
