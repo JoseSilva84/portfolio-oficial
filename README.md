@@ -27,7 +27,7 @@ Um portfólio moderno e responsivo construído com HTML, CSS e JavaScript, apres
 ## 📁 Estrutura do Projeto
 
 ```
-protfólio/
+portfólio/
 ├── index.html          # Arquivo principal
 ├── style.css           # Estilos CSS
 ├── menu.js             # Scripts JavaScript
