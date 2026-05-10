@@ -205,6 +205,28 @@ form,
     /* box-shadow: 0 10px 40px rgba(0, 80, 30, 0.25); */
 }
 
+/* Acessibilidade: skip link */
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    z-index: 100000;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(0, 255, 136, 0.95);
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    transform: translateY(-200%);
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 4px;
+}
+
 .interface {
     max-width: 1280px;
     margin: 0 auto;
@@ -232,6 +254,29 @@ form,
     border-radius: 30px;
     cursor: pointer;
     transition: .2s;
+}
+
+/* Permite usar link com aparência de botão */
+.btn-contato a.btn,
+.btn-contato a > .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00FF08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #000;
+}
+
+.btn-contato a.btn:hover,
+.btn-contato a > .btn:hover {
+    box-shadow: 0px 0px 8px #00ff08;
+    transform: scale(1.05);
 }
 
 h2.titulo {
@@ -316,6 +361,21 @@ header nav.menu-desktop a:hover {
     transform: scale(1.05);
 }
 
+/* Estado ativo do menu (scroll spy) */
+header nav.menu-desktop a.is-active {
+    color: #00ff08;
+}
+
+header nav.menu-desktop a.is-active::after {
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 6px;
+    background: #00ff08;
+    border-radius: 999px;
+    box-shadow: 0 0 12px rgba(0,255,8,0.35);
+}
+
 header nav ul {
     list-style-type: none;
 }
@@ -359,6 +419,11 @@ header nav.menu-desktop ul li {
 
 .menu-mobile .btn-fechar{
     padding: 20px 5%;
+    background: transparent;
+    border: 0;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
 }
 
 .menu-mobile .btn-fechar i{
@@ -709,6 +774,11 @@ section.portfolio .flex {
     position: relative;
 }
 
+.img-port:focus-visible {
+    outline: 3px solid rgba(0,255,8,0.9);
+    outline-offset: 6px;
+}
+
 .img-port:hover {
     background-position: 100% 100%;
 }
@@ -731,7 +801,8 @@ section.portfolio .flex {
     transition: .5s;
 }
 
-.overlay:hover {
+.img-port:hover .overlay,
+.img-port:focus-visible .overlay {
     opacity: 1;
 }
 
@@ -785,6 +856,27 @@ form .btn-enviar input {
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
+}
+
+.form-status {
+    min-height: 22px;
+    font-size: 14px;
+    opacity: 0.95;
+    margin-top: 8px;
+    padding-left: 4px;
+}
+
+.form-status.is-error {
+    color: #ffb3b3;
+}
+
+.form-status.is-success {
+    color: #00ff88;
+}
+
+/* Scroll com header fixo: melhora ancoras */
+section[id] {
+    scroll-margin-top: 110px;
 }
 
 /* ESTILO DO RODAPÉ */

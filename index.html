@@ -65,6 +65,8 @@
 
 <body>
 
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
     <header id="header">
         <div class="interface">
             <div class="logo">
@@ -74,7 +76,7 @@
                 </a>
             </div><!--logo-->
 
-            <nav class="menu-desktop">
+            <nav class="menu-desktop" aria-label="Menu principal">
                 <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#especialidades">Especialidades</a></li>
@@ -86,18 +88,18 @@
 
             <div class="btn-contato">
                 <a href="#contato">
-                    <button>Contato</button>
+                    <span class="btn">Contato</span>
                 </a>
             </div><!--btn-contato-->
 
-            <div class="btn-abrir-menu" id="btn-menu">
+            <button class="btn-abrir-menu" id="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
                 <i class="bi bi-list"></i>
-            </div>
+            </button>
 
-            <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
+            <aside class="menu-mobile" id="menu-mobile" aria-label="Menu mobile" aria-hidden="true">
+                <button class="btn-fechar" id="btn-fechar-menu" type="button" aria-label="Fechar menu">
                     <i class="bi bi-x-lg"></i>
-                </div>
+                </button>
 
                 <nav>
                     <ul>
@@ -111,12 +113,12 @@
                     </ul>
                 </nav>
 
-            </div><!--menu-mobile-->
+            </aside><!--menu-mobile-->
             <div class="overlay-menu" id="overlay-menu"></div>
         </div><!--interface-->
     </header>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
         <section class="topo-do-site reveal">
             <div class="interface">
                 <div class="flex">
@@ -127,9 +129,7 @@
                             intuitivas, eficientes e preparadas para crescer com o seu negócio.</p>
 
                         <div class="btn-contato">
-                            <a href="#contato">
-                                <button>Entre em contato</button>
-                            </a>
+                            <a href="#projetos" class="btn">Ver projetos</a>
                         </div>
                     </div><!--txt-topo-site-->
 
@@ -249,7 +249,7 @@
                     <div class="formacao-box reveal">
                         <i class="bi bi-mortarboard"></i>
                         <h3>Nível Superior em Análise e Desenvolvimento de Sistemas</h3>
-                        <p>UNIASSELVI<br>2024 – 2026</p>
+                        <p>2024 – 2026</p>
                     </div>
 
                     <div class="formacao-box reveal">
@@ -326,7 +326,7 @@
             <div class="interface">
                 <h2 class="titulo">PRINCIPAIS <span>PROJETOS.</span></h2>
                 <div class="flex">
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Sistema de Coleta de Dados" style="background-image: url(images/imagem.jpg);"
                          data-title="Sistema de Coleta de Dados"
                          data-description="Sistema para coleta e gerenciamento de dados com formulários e dashboards para análise para desktop." 
                          data-tech="HTML, CSS, JavaScript, Python, SQLite"
@@ -335,16 +335,16 @@
                         <div class="overlay">Sistema de Coleta de Dados</div>
                     </div>
 
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem2.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: E-Commerce Digital" style="background-image: url(images/imagem2.jpg);"
                          data-title="E-Commerce Digital"
                          data-description="Loja virtual com catálogo, carrinho, integração de pagamentos e deploy em Vercel." 
-                         data-tech="React, Tailwind CSS, Node.js, mongoDb, express, prima, jwt, Vercel"
+                         data-tech="React, Tailwind CSS, Node.js, MongoDB, Express, Prisma, JWT, Vercel"
                          data-live="https://projeto-e-commerce-digital-store-tqj2-6a3mcion0.vercel.app/"
                          data-github="https://github.com/JoseSilva84/projeto-e-commerce-digital-store">
                         <div class="overlay">E-Commerce Digital</div>
                     </div>
 
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem3.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Site Psicopedagoga" style="background-image: url(images/imagem3.jpg);"
                          data-title="Site Psicopedagoga"
                          data-description="Site institucional para psicopedagoga, com área de contato e agendamento. Possui um backend leve com Firebase para armazenar as fotos da galeria e dar base à construção do blog." 
                          data-tech="Frontend: HTML, CSS, JavaScript | Backend: Firebase (Storage/DB)"
@@ -353,25 +353,25 @@
                     </div>
                 </div><!--flex-->
                 <div class="flex">
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem4.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Sistema Hamburgueria" style="background-image: url(images/imagem4.jpg);"
                          data-title="Sistema Hamburgueria"
                          data-description="Sistema para gerenciamento de pedidos e estoque de uma hamburgueria." 
-                         data-tech="HTML, Bootstrap, JavaScript, Nodejs, Express, Sequelize, PostreSQL, Jwt"
+                         data-tech="HTML, Bootstrap, JavaScript, Node.js, Express, Sequelize, PostgreSQL, JWT"
                          data-live="https://burguer-house-five.vercel.app/"
                          data-github="https://github.com/JoseSilva84/Burguer-House">
                         <div class="overlay">Sistema Hamburgueria</div>
                     </div>
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem5.jpg);"
-                         data-title="Chatboot para Atendimento no WhatsApp"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Chatbot para Atendimento no WhatsApp" style="background-image: url(images/imagem5.jpg);"
+                         data-title="Chatbot para Atendimento no WhatsApp"
                          data-description="Chatbot para atendimento ao cliente." 
                          data-tech="Python, FastAPI, Servidor, Token de uso e segurança, Consumo da Api Wppconnect-server"
                          data-github="https://github.com/JoseSilva84/whatsapp-chatbot">
-                        <div class="overlay">Chatboot para WhatsApp</div>
+                        <div class="overlay">Chatbot para WhatsApp</div>
                     </div>
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem6.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Sistema Secretaria Projeto Social" style="background-image: url(images/imagem6.jpg);"
                          data-title="Sistema Secretaria Projeto Social" 
                          data-description="Sistema para gerenciamento de atividades da secretaria de projeto social."
-                         data-tech="React, Tailwind CSS, JavaScript, Nodejs, Express, Prisma, Mongodb, Jwt, bycrypt, Vercel"
+                         data-tech="React, Tailwind CSS, JavaScript, Node.js, Express, Prisma, MongoDB, JWT, bcrypt, Vercel"
                          data-live="https://projetosocial-iasd.vercel.app/"
                          data-github="https://github.com/JoseSilva84/projetosocialIASD">
                         <div class="overlay">Sistema Secretaria Social</div>
@@ -379,7 +379,7 @@
 
                 </div><!--flex-->
                 <div class="flex">
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem7.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Sistema Crediário" style="background-image: url(images/imagem7.jpg);"
                          data-title="Sistema Crediário"
                          data-description="SaaS para controle de crediário, com cadastros, gestão operacional e pagamentos integrados."
                          data-tech="Frontend: React, Vite, JavaScript, HTML, CSS | Backend: Node.js, Express, Zod, API REST | Banco: PostgreSQL | Pagamentos: Stripe | Deploy: Vercel"
@@ -388,7 +388,7 @@
                         <div class="overlay">Sistema Crediário</div>
                     </div>
 
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem8.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Catálogo de Filmes" style="background-image: url(images/imagem8.jpg);"
                          data-title="Catálogo de Filmes"
                          data-description="Aplicação em React que consome a API do TMDB. Inclui uma IA para busca descritiva: o usuário descreve o filme e a IA retorna opções de títulos para escolher."
                          data-tech="React, React Router DOM, TMDB API, IA (busca descritiva), LocalStorage, CSS Modules/Styled Components, Vercel"
@@ -397,7 +397,7 @@
                         <div class="overlay">Catálogo de Filmes</div>
                     </div>
 
-                    <div class="img-port reveal-zoom reveal" style="background-image: url(images/imagem9.jpg);"
+                    <div class="img-port reveal-zoom reveal" role="button" tabindex="0" aria-label="Abrir detalhes: Dário Personal" style="background-image: url(images/imagem9.jpg);"
                          data-title="Dário Personal"
                          data-description="Site institucional para consultoria online, com foco em performance e conversão."
                          data-tech="React, Vite, JavaScript, CSS, Vercel"
@@ -415,8 +415,8 @@
 
                 <form id="whatsappForm">
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
-                    <input type="text" name="email" id="email" placeholder="Seu e-mail:">
-                    <input type="number" name="whatsapp" id="whatsapp" placeholder="Seu whatsApp:">
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail:" autocomplete="email">
+                    <input type="tel" name="whatsapp" id="whatsapp" placeholder="Seu WhatsApp:" inputmode="tel" autocomplete="tel">
 
                     <select id="servico" name="servico">
                         <option value="" disabled selected hidden>Selecione um serviço</option>
@@ -428,6 +428,7 @@
 
                     <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
                     <div class="btn-enviar" id="whatsappBtn"><input type="submit" value="ENVIAR"></div>
+                    <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div><!--interface-->
         </section><!--formulario-->
@@ -470,9 +471,9 @@
         </div><!--interface-->
     </footer>
     <!-- MODAL CV -->
-    <div id="modalCV" class="modal-cv">
-        <div class="modal-cv-content">
-            <button id="closeCV" class="btn-fechar-cv">
+    <div id="modalCV" class="modal-cv" role="dialog" aria-modal="true" aria-label="Currículo" aria-hidden="true">
+        <div class="modal-cv-content" role="document" tabindex="-1">
+            <button id="closeCV" class="btn-fechar-cv" type="button" aria-label="Fechar currículo">
                 <i class="bi bi-x-lg"></i>
             </button>
             <iframe src="https://drive.google.com/file/d/18Q87v-9erBWZ2bwWc5sNgEQzN6E8GbWE/preview" 
@@ -484,9 +485,9 @@
     </div><!--modal-cv-->
 
         <!-- MODAL PROJETO -->
-        <div id="modalProject" class="modal-cv">
-            <div class="modal-cv-content">
-                <button id="closeProject" class="btn-fechar-cv">
+        <div id="modalProject" class="modal-cv" role="dialog" aria-modal="true" aria-label="Detalhes do projeto" aria-hidden="true">
+            <div class="modal-cv-content" role="document" tabindex="-1">
+                <button id="closeProject" class="btn-fechar-cv" type="button" aria-label="Fechar detalhes do projeto">
                     <i class="bi bi-x-lg"></i>
                 </button>
                 <div class="project-inner" style="padding:28px; color:#fff;">
